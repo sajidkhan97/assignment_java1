@@ -1,0 +1,199 @@
+1--
+public class Armstrong {
+
+    public static void main(String[] args) {
+
+        int number = 371, originalNumber, remainder, result = 0;
+
+        originalNumber = number;
+
+        while (originalNumber != 0)
+        {
+            remainder = originalNumber % 10;
+            result += Math.pow(remainder, 3);
+            originalNumber /= 10;
+        }
+
+        if(result == number)
+            System.out.println(number + " is an Armstrong number.");
+        else
+            System.out.println(number + " is not an Armstrong number.");
+    }
+} 
+
+
+
+2--import java.util.Scanner;
+
+public class JavaExample
+{
+    public static void main(String args[])
+    {
+	int num, start, end, i, rem, temp, counter=0;
+		
+	Scanner scanner = new Scanner(System.in);
+	System.out.print("Enter the start number: ");
+	start = scanner.nextInt();
+	System.out.print("Enter the end number: ");
+	end = scanner.nextInt();
+	scanner.close();
+
+	//generate Armstrong numbers between start and end
+	for(i=start+1; i<end; i++)
+	{
+	   temp = i;
+	   num = 0;
+	   while(temp != 0)
+	   {
+		rem = temp%10;
+		num = num + rem*rem*rem;
+		temp = temp/10;
+	   }
+	   if(i == num)
+	   {
+		if(counter == 0)
+		{
+		   System.out.print("Armstrong Numbers Between "+start+" and "+end+": ");
+		}
+		   System.out.print(i + "  ");
+		   counter++;
+	   }
+	}
+	// if no Armstrong number is found
+	if(counter == 0)
+	{
+	   System.out.print("There is no Armstrong number Between "+start+" and "+end);
+	}
+    }
+}
+
+
+
+
+
+
+
+3--
+
+Step 1:Start
+
+Step 2:Read Principal Amount, Rate and Time
+
+Step 3:Calculate Interest using formula SI= ((amount*rate*time)/100)
+
+Step 4:Print Simple Interest
+
+Step 5:Stop
+
+
+
+4--
+step 1: start
+step 2: read user id and password
+step 3:click login
+step 4: show login attemts
+step 5:print  welcome
+step 6:contact admin
+step 7: stop
+
+
+
+5--
+
+import java.util.Arrays;
+
+class GFG {
+
+	
+	private static void check(int[] arr, int toCheckValue)
+	{
+		
+		boolean test = false;
+		for (int element : arr) {
+			if (element == toCheckValue) {
+				test = true;
+				break;
+			}
+		}
+
+		
+		System.out.println("Is " + toCheckValue
+						+ " present in the array: " + test);
+	}
+
+	public static void main(String[] args)
+	{
+
+		
+		int arr[] = { 5, 12, 14, 6, 78, 19, 1, 23,26,35,37,7,52,86,47};
+
+		
+		int toCheckValue = 7;
+
+		
+		System.out.println("Array: "
+						+ Arrays.toString(arr));
+
+		
+		check(arr, toCheckValue);
+	}
+}
+
+6--
+
+STEP 1: START
+STEP 2: INITIALIZE arr[] ={5, 12, 14, 6, 78, 19, 1, 23,26,35,37,7,52,86,47 }.
+STEP 3: SET temp =0
+STEP 4: PRINT "Elements of Original Array"
+STEP 5: REPEAT STEP 6 UNTIL i<arr.length
+            //for(i=0; i<arr.length; i++)
+STEP 6: PRINT arr[i]
+STEP 7: REPEAT STEP 8 to STEP 9 UNTIL i<arr.length
+            //for(i=0; i<arr.length; i++ )
+STEP 8: REPEAT STEP 9 UNTIL j<arr.length
+            //for(j=i+1;j<arr.length;j++)
+STEP 9: if(arr[i]>arr[j]) then
+            temp = arr[i]
+            arr[i]=arr[j]
+            arr[j]=temp
+STEP 10: PRINT new line
+STEP 11: PRINT "Elements of array sorted in ascending order"
+STEP 12: REPEAT STEP 13 UNTIL i<arr.length
+            //for(i=0;i<arr.length;i++)
+STEP 13: PRINT arr[i]
+STEP 14: END
+
+
+7--
+
+
+public class MarksCalculator
+{
+    public static void main(String args[])
+    {
+        int markArray[] = new int[5];
+        int i;
+        float sum=0;
+        float average, percentage;
+        Scanner scan = new Scanner(System.in);
+ 
+        System.out.print("Enter marks for 5 Subjects : ");
+        for(i=0; i<3; i++){
+            markArray[i] = scan.nextInt();
+            sum = sum + markArray[i];
+        }
+ 
+        average = sum/3;
+        percentage = (sum/500) * 100;
+ 
+        System.out.print("Average Marks = " +average);
+ 
+        System.out.print("\nPercentage = " +percentage+ "%");
+    }
+}
+
+
+
+
+
+
